@@ -1,0 +1,10 @@
+---
+name: Docker Hugo
+slug: docker-hugo
+project: cardboardci
+namespace: []
+description: Hugo is an open-source static site generator.
+license:
+  name: MIT
+tags:
+  - docker
