@@ -12,24 +12,24 @@ RUN apk add --no-cache git=2.18.1-r0 asciidoctor=1.5.7.1-r0 libc6-compat=1.1.19-
 ARG build_date
 ARG version
 ARG vcs_ref
-LABEL maintainer="CardboardCI" \
+LABEL maintainer = "CardboardCI" \
     \
-    org.label-schema.schema-version="1.0" \
+    org.label-schema.schema-version = "1.0" \
     \
-    org.label-schema.name="hugo" \
-    org.label-schema.version="${version}" \
-    org.label-schema.build-date="${build_date}" \
-    org.label-schema.release=="CardboardCI version:${version} build-date:${build_date}" \
-    org.label-schema.vendor="cardboardci" \
-    org.label-schema.architecture="amd64" \
+    org.label-schema.name = "hugo" \
+    org.label-schema.version = "${version}" \
+    org.label-schema.build-date = "${build_date}" \
+    org.label-schema.release= = "CardboardCI version:${version} build-date:${build_date}" \
+    org.label-schema.vendor = "cardboardci" \
+    org.label-schema.architecture = "amd64" \
     \
-    org.label-schema.summary="Hugo static site generator" \
-    org.label-schema.description=" Hugo is an open-source static site generator" \
+    org.label-schema.summary = "Hugo static site generator" \
+    org.label-schema.description = " Hugo is an open-source static site generator" \
     \
-    org.label-schema.url="https://gitlab.com/cardboardci/images/hugo" \
-    org.label-schema.changelog-url="https://gitlab.com/cardboardci/images/hugo/releases" \
-    org.label-schema.authoritative-source-url="https://cloud.docker.com/u/cardboardci/repository/docker/cardboardci/hugo" \
-    org.label-schema.distribution-scope="public" \
-    org.label-schema.vcs-type="git" \
-    org.label-schema.vcs-url="https://gitlab.com/cardboardci/images/hugo" \
-    org.label-schema.vcs-ref="${vcs_ref}" \
+    org.label-schema.url = "https://gitlab.com/cardboardci/images/hugo" \
+    org.label-schema.changelog-url = "https://gitlab.com/cardboardci/images/hugo/releases" \
+    org.label-schema.authoritative-source-url = "https://cloud.docker.com/u/cardboardci/repository/docker/cardboardci/hugo" \
+    org.label-schema.distribution-scope = "public" \
+    org.label-schema.vcs-type = "git" \
+    org.label-schema.vcs-url = "https://gitlab.com/cardboardci/images/hugo" \
+    org.label-schema.vcs-ref = "${vcs_ref}" \
