@@ -1,4 +1,4 @@
-FROM alpine:3.8
+FROM alpine:3.10.3
 ARG VERSION=0.54.0
 
 ADD https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_extended_${VERSION}_Linux-64bit.tar.gz /tmp
