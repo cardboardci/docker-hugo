@@ -1,10 +1,20 @@
-FROM alpine:3.8
-ARG VERSION=0.54.0
+FROM cardboardci/ci-core:latest
+USER root
 
-ADD https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_extended_${VERSION}_Linux-64bit.tar.gz /tmp
-RUN tar -xf /tmp/hugo_extended_${VERSION}_Linux-64bit.tar.gz -C /usr/local/bin
+ARG VERSION=0.59.1
 
-RUN apk add --no-cache git=2.18.1-r0 asciidoctor=1.5.7.1-r0 libc6-compat=1.1.19-r10 libstdc++=6.4.0-r9 ca-certificates=20190108-r0
+COPY provision/pkglist /cardboardci/pkglist
+RUN apt-get update \
+    && xargs -a /cardboardci/pkglist apt-get install -y \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN curl -sL -o /tmp/hugo.deb \
+    https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb && \
+    dpkg -i /tmp/hugo.deb && \
+    rm /tmp/hugo.deb
+
+USER cardboardci
 
 ##
 ## Image Metadata
