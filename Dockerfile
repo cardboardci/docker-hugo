@@ -9,12 +9,16 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-RUN curl -sL -o /tmp/hugo.deb \
-    https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb && \
-    dpkg -i /tmp/hugo.deb && \
-    rm /tmp/hugo.deb
+RUN curl -sSL \
+    "https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_extended_${VERSION}_Linux-64bit.tar.gz" \
+    -o /tmp/hugo.tar.gz \
+    && tar -xf /tmp/hugo.tar.gz -C /tmp \
+    && mkdir -p /usr/local/sbin \
+    && mv /tmp/hugo /usr/local/sbin/hugo \
+    && rm -rf /tmp/*
 
 USER cardboardci
+ENTRYPOINT []
 
 ##
 ## Image Metadata
