@@ -1,8 +1,0 @@
-{
-  "name": "docker-hugo",
-  "tagline": "Hugo is an open-source static site generator.",
-  "license": {
-    "name": "MIT"
-  },
-  "tags": ["docker", "hugo", "website"]
-}
