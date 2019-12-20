@@ -1,4 +1,4 @@
-FROM cardboardci/ci-core:latest
+FROM cardboardci/ci-core:focal
 USER root
 
 ARG VERSION=0.59.1
@@ -18,7 +18,6 @@ RUN curl -sSL \
     && rm -rf /tmp/*
 
 USER cardboardci
-ENTRYPOINT []
 
 ##
 ## Image Metadata
