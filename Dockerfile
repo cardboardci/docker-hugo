@@ -10,7 +10,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 RUN curl -sSL \
-    "https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_extended_${VERSION}_Linux-64bit.tar.gz"
+    "https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_extended_${VERSION}_Linux-64bit.tar.gz" \
     -o /tmp/hugo.tar.gz \
     && tar -xf /tmp/hugo.tar.gz -C /tmp \
     && mkdir -p /usr/local/sbin \
