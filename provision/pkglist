@@ -2,4 +2,4 @@ libstdc++6=10-20200211-1ubuntu1
 python-pygments=2.3.1+dfsg-1ubuntu2
 git=1:2.25.0-1ubuntu1
 ca-certificates=20190110
-curl=7.66.0-1ubuntu1
+curl=7.67.0-2ubuntu1
