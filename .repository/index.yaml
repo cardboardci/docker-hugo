@@ -1,0 +1,17 @@
+slug: docker-hugo
+description: Hugo is an open-source static site generator.
+project: cardboardci
+namespace: docker
+status: archived
+icon: icon.svg
+license:
+  type: MIT
+  content: Jonathan Beverly <jrbeverly>
+  year: 2019
+topics: |-
+  [
+    "dockerfile",
+    "hugo",
+    "static-site-generator",
+    "static-site"
+  ]
